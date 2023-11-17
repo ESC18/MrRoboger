@@ -50,13 +50,19 @@ button {
 }
 
 #result {
-    color: white;
+    color: black;
+    background-color: white;
+    border: #FF7700 solid 5px;
+    border-radius: 5px;
     font-family: Roboto Mono;
     position: absolute;
     text-align: center;
-    top: 85%;
+    top: 75%;
+    overflow-y: scroll;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 350px;
+    max-width: 1050px;
+    max-height: 300px;
     font-size: 20px;
+    padding: 5px;
 }
