@@ -26,7 +26,10 @@ function textInsertion(newArray) {
     })
 }
 
-
+function displayResult(inputNumber) {
+    let result = document.getElementById("result");
+    return result.innerHTML = arrayGenerator(inputNumber).join(" ");
+}
 
 
 
@@ -36,6 +39,6 @@ function initializer() {
     form.addEventListener("submit", function(event) {
         event.preventDefault();
         let inputNumber = document.querySelector("input").value;
-        arrayGenerator(inputNumber);
+        displayResult(inputNumber);
     })
 }
