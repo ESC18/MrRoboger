@@ -1,6 +1,19 @@
 function arrayGenerator(input) {
     newArray = [];
-    
+    for (let i = 0; input > i; i++) {
+        newArray.push(i);
+    }
+    textInsertion(newArray);
+}
+
+function textInsertion(newArray) {
+    resultArray = []
+    newArray.forEach(function(num) {
+        switch (num) {
+            case 3:
+                
+        }
+    })
 }
 
 
