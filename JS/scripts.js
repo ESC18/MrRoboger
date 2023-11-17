@@ -1,5 +1,5 @@
 function arrayGenerator(input) {
-    newArray = [];
+    let newArray = [];
     for (let i = 0; input > i; i++) {
         newArray.push(i);
     }
@@ -7,7 +7,7 @@ function arrayGenerator(input) {
 }
 
 function textInsertion(newArray) {
-    resultArray = []
+    let resultArray = []
     newArray.forEach(function(num) {
         switch (num) {
             case 3:
@@ -24,15 +24,13 @@ function textInsertion(newArray) {
                 break;
         }
     })
+    return resultArray;
 }
 
 function displayResult(inputNumber) {
     let result = document.getElementById("result");
     return result.innerHTML = arrayGenerator(inputNumber).join(" ");
 }
-
-
-
 
 function initializer() {
     let form = document.getElementById("form");
@@ -42,3 +40,5 @@ function initializer() {
         displayResult(inputNumber);
     })
 }
+
+initializer();
