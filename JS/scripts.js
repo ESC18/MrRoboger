@@ -1,6 +1,6 @@
 function arrayGenerator(input) {
     let newArray = [];
-    for (let i = 0; input > i; i++) {
+    for (let i = 0; input >= i; i++) {
         newArray.push(i);
     }
      return textInsertion(newArray);
@@ -8,20 +8,16 @@ function arrayGenerator(input) {
 
 function textInsertion(newArray) {
     let resultArray = []
-    newArray.forEach(function(num) {
-        switch (num) {
-            case 3:
-                resultArray.push("Won't you be my neighbor?");
-                break;
-            case 2:
-                resultArray.push("Boop!");
-                break;
-            case 1: 
-                resultArray.push("Beep!");
-                break;
-            default:
-                resultArray.push(num);
-                break;
+    newArray.forEach(function(number) {
+        let num = number.toString();
+        if (num.includes("3")) {
+            resultArray.push("Won't you be my neighbor?");
+        } else if (num.includes("2")) {
+            resultArray.push("Boop!");
+        } else if (num.includes("1")) {
+            resultArray.push("Beep!");
+        } else {
+            resultArray.push(num);
         }
     })
     return resultArray;
