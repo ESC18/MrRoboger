@@ -3,7 +3,7 @@ function arrayGenerator(input) {
     for (let i = 0; input > i; i++) {
         newArray.push(i);
     }
-    textInsertion(newArray);
+     return textInsertion(newArray);
 }
 
 function textInsertion(newArray) {
@@ -11,12 +11,20 @@ function textInsertion(newArray) {
     newArray.forEach(function(num) {
         switch (num) {
             case 3:
-                
+                resultArray.push("Won't you be my neighbor?");
+                break;
+            case 2:
+                resultArray.push("Boop!");
+                break;
+            case 1: 
+                resultArray.push("Beep!");
+                break;
+            default:
+                resultArray.push(num);
+                break;
         }
     })
 }
-
-
 
 
 
