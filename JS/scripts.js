@@ -10,7 +10,7 @@ function arrayGenerator(input) {
 
 //Takes array from arrayGenerator and replaces numbers with specified strings if they contain 1,2, or 3.
 function textInsertion(newArray) {
-    let resultArray = []
+    let resultArray = [];
     newArray.forEach(function(number) {
         let num = number.toString();
         if (num.includes("3")) {
@@ -22,7 +22,7 @@ function textInsertion(newArray) {
         } else {
             resultArray.push(num);
         }
-    })
+    });
     return resultArray;
 }
 
@@ -40,7 +40,7 @@ function initializer() {
         event.preventDefault();
         let inputNumber = document.querySelector("input").value;
         displayResult(inputNumber);
-    })
+    });
 }
 
 initializer();

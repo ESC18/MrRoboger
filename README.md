@@ -50,24 +50,49 @@ SOFTWARE.
 
 ## Tests:
 
-describe arrayGenerator()
+### Describe arrayGenerator()
 
-Test: Will take in the number that the user has inputted and will generator an array of numbers from 0 to the users specificied number.
-Code: for (let i = 0; i < inputNumber; i++) {
-        newArray.push(i);
-    }
+- Test: Will take in the number that the user has inputted and will generator an array of numbers from 0 to the users specificied number.
+Code: 
+    let inputNumber = 10;
+    arrayGenerator(inputNumber)
 Input: 10.
 Expected Result: [0,1,2,3,4,5,6,7,8,9,10].
 
-describe textInsertion() 
+### Describe: textInsertion()
 
-Test: Will take the newly generated array from arrayGenerator() and will go through the array - and identify if it contains the numbers[1,2,3] at a given index. And will proceed to replace the number with specified string.
-Code: newArray.forEach(function(num) {
-    switch (num) {
-        case 3:
-            resultArray.push("Won't you be my neighbor?");
-    }
-})
-Input: [0,1,2,3,4,5,6,7,8,9,10].
-Expected Result: [0, beep, boop, Won't you be my neighbor?, 4, 5, 6, 7, 8, 9, beep];
+- Test: Will take the newly generated array from arrayGenerator() and will go through the array - and identify if it contains the numbers[1,2,3] at a given index. If it does NOT contain a 1,2, or 3, it will push the number to the array.
+
+Code:
+    let testArr = [0,1,2,3,4,5,6,7,8,9]
+    textInsertion(testArr);
+
+Expected result: ["0", "beep", "boop", "won't you be my neighbor?", "4", "5", "6", "7", "8", "9"]
+
+
+- Test: Will take the newly generated array from arrayGenerator() and will go through the array - and identify if it contains the numbers[1,2,3] at a given index. If it DOES contain a *1* it will push the string "beep" to the array.
+
+Code:
+    let testArr = [0,1,2,3,4,5,6,7,8,9]
+    textInsertion(testArr);
+
+Expected result: ["0", "beep", "boop", "won't you be my neighbor?", "4", "5", "6", "7", "8", "9"]
+
+
+- Test: Will take the newly generated array from arrayGenerator() and will go through the array - and identify if it contains the numbers[1,2,3] at a given index. If it DOES contain a *2*,  it will push the string "boop" to the array.
+
+Code:
+    let testArr = [0,1,2,3,4,5,6,7,8,9]
+    textInsertion(testArr);
+
+Expected result: ["0", "beep", "boop", "won't you be my neighbor?", "4", "5", "6", "7", "8", "9"]
+
+
+- Test: Will take the newly generated array from arrayGenerator() and will go through the array - and identify if it contains the numbers[1,2,3] at a given index. If it DOES contain a *3*, it will push the string "Won't you be my neighbor?" to the array.
+
+Code:
+    let testArr = [0,1,2,3,4,5,6,7,8,9]
+    textInsertion(testArr);
+
+Expected result: ["0", "beep", "boop", "won't you be my neighbor?", "4", "5", "6", "7", "8", "9"]
 
